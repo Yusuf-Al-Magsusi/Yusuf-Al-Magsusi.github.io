@@ -4,17 +4,16 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const socialLinks = [
-  { label: "GitHub", href: "#", code: "GH" },
-  { label: "LinkedIn", href: "#", code: "LI" },
-  { label: "Twitter / X", href: "#", code: "TW" },
-  { label: "Resume", href: "#", code: "CV" },
+  { label: "GitHub", href: "https://github.com/Yusuf-Al-Magsusi", code: "GH" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/yusuf-al-magsusi", code: "LI" },
+  { label: "Resume", href: "/resume.pdf", code: "CV" },
 ];
 
 export default function Contact() {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-10% 0px" });
   const [hovered, setHovered] = useState(false);
-  const email = "Almagsusiy@spu.edu";
+  const email = "YusufAlmag@gmail.com";
 
   return (
     <section
@@ -128,6 +127,8 @@ export default function Contact() {
               <motion.a
                 key={link.label}
                 href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 8 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.6 + i * 0.07 }}
