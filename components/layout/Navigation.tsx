@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FileText } from "lucide-react";
+import { FileText } from "lucide-react"; // lucide-react 1.x — Github/Linkedin removed; using inline SVGs below
 import { navItems } from "@/lib/data";
 
 function GithubIcon({ size = 14 }: { size?: number }) {
